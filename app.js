@@ -8,7 +8,7 @@ const authRoute = require('./routes/auth');
 const postRoute= require('./routes/posts')
 
 //MIDDLEWARE
-
+app.use(cors({credentials:true,origin:true}));
 app.use(express.json())
 app.use("/api/user",authRoute);
 app.use('/api/posts',postRoute); 
@@ -21,5 +21,4 @@ app.get("/",(req,res)=>{
 
 
 //port
-const port = proces.env.PORT || 3000
-app.listen(port);
+app.listen(process.env.PORT || 3000);
