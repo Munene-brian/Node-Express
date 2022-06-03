@@ -21,4 +21,5 @@ app.get("/",(req,res)=>{
 
 
 //port
-app.listen(3000);
+const port = proces.env.PORT || 3000
+app.listen(port);
