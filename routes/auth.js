@@ -66,9 +66,9 @@ route.post('/login',async(req,res)=>{
 
     //create Web Token
     const token = jwt.sign({_id:userCredia._id},process.env.TOKEN_SECRET)
-    res.header('auth-token',token).send(token)
+    res.header('auth-token',token).send(token);
 
-    res.send('Successful Login')
+    //res.send('Successful Login')
 })
 
 module.exports = route
